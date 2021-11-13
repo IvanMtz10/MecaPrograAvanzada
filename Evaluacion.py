@@ -8,17 +8,17 @@ class Persona:
         self.__noTelefono=noTelefono
         self.__carrera=carrera
 #Getters y setters
-    def __getNombre(self):
+    def getNombre(self):
         return self.__nombre
-    def __getApellidoP(self):
+    def getApellidoP(self):
         return self.__apellidoP
-    def __getApellidoM(self):
+    def getApellidoM(self):
         return self.__apellidoM
-    def __getEdad(self):
+    def getEdad(self):
         return self.__edad
-    def __getAltura(self):
+    def getAltura(self):
         return self.__altura
-    def __getTelefono(self):
+    def getTelefono(self):
         return self.__noTelefono
 
     def setNombre(self, nombreCorrecto):
@@ -35,7 +35,10 @@ class Persona:
         self.__noTelefono=nuevoTelefono
 
     def presentacion(self):
-        pass
+        print("Hola mi nombre es: ",self.getNombre(), self.getApellidoP(), self.getApellidoM())
+        print("Tengo ",self.getEdad(),"años de edad")
+        print("Mi altura es: ",self.getAltura())
+        print("Mi numero de telefono es: ",self.getTelefono())
 
 class Empleado(Persona):
     def __init__(self,nombre,apellidoP,apellidoM, edad,altura,noTelefono,carrera, empresa, cargo, sueldo):
@@ -52,12 +55,19 @@ class Empleado(Persona):
     def getSueldo(self):
         return self.__sueldo
 
+    def setEmpresa(self, nuevaEmpresa):
+        self.__empresa=nuevaEmpresa
     def setCargo(self, nuevoCargo):
         self.__cargo=nuevoCargo
 
+    def presetacion(self):
+        Persona.presentacion(self)
+        print(OCup)
+
+
 class Gerente(Empleado):
-    def __init__(self,nombre, edad,altura, cargo):
-        super().__init__(nombre, edad,altura, cargo)
+    def __init__(self,nombre,apellidoP,apellidoM, edad,altura,noTelefono,carrera, empresa, cargo, sueldo):
+        super().__init__(nombre,apellidoP,apellidoM, edad,altura,noTelefono,carrera, empresa, cargo, sueldo)
 
     def vestimenta(self):
         print("El gerente esta tiene puesto un saco con 3 botones")
