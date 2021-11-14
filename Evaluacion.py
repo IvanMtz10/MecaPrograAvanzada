@@ -56,6 +56,8 @@ class Persona(vestimenta):
         return self.__altura
     def getTelefono(self):
         return self.__noTelefono
+    def getCarrera(self):
+        return self.__carrera
 
     def setNombre(self, nombreCorrecto):
         self.__nombre=nombreCorrecto
@@ -69,6 +71,8 @@ class Persona(vestimenta):
         self.__altura=nuevaAltura
     def setTelefono(self,nuevoTelefono):
         self.__noTelefono=nuevoTelefono
+    def setCarrra(self, nuevaCarrera):
+        self.__carrera=nuevaCarrera
 
     def presentacion(self):
         print("Hola mi nombre es: ",self.getNombre(), self.getApellidoP(), self.getApellidoM())
@@ -124,6 +128,33 @@ class Empresa:
         print("Ubicada en ",self.__ubicacion)
         print("Con innovacion alcanzamos el mañana")
         print("\n")
+
+    def entrevistar(self,gerente, persona):
+        if (gerente.getCargo() == "Gerente"):
+            print("El entrevistador es:", gerente.getNombre(), "que realizara la entrevista a :", persona.getNombre())
+            print("Buen dia, le pido contestar una entrevista rapida")
+            print("Para comenzar la entrevista seran datos personales")
+            print("¿Cual es su nombre? ")
+            print("Mi nombre es: ", persona.getNombre())
+            print("¿Cual es su primer apellido? ")
+            print("Mi apellido paterno es: ",persona.getApellidoP())
+            print("¿Cual es su segundo apellido? ")
+            print("Mi apellido materno es: ", persona.getApellidoM())
+            print("¿Cual es su edad? ")
+            print("Mi edad es: ",persona.getEdad())
+            print("¿Cual es su altura? ")
+            print("Mi altura es: ",persona.getAltura())
+            print("¿Cual es su numero de telefono? ")
+            print("Mi numero de telefono es: ", persona.getTelefono())
+            print("¿Cual es su carrera? ")
+            print("Mi carrera es:", persona.getCarrera())
+            print("***************************************************")
+            print("Ahora pasaremos a preguntas laborales")
+
+
+        else:
+            print("ACCESO DENEGADO")
+
 
 
 
