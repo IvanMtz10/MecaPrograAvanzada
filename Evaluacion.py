@@ -32,7 +32,8 @@ class vestimenta:
         print("Un saco: ", self.getSaco())
         print("Una camisa: ", self.getCamisa())
 
-
+    def __del__(self):
+        pass
 class Persona(vestimenta):
     def __init__(self, nombre,apellidoP,apellidoM, edad,altura,noTelefono,carrera,tipoZapatos, tipoPantalon, tipoCamisa, saco):
         super().__init__(tipoZapatos, tipoPantalon, tipoCamisa, saco)
@@ -208,7 +209,14 @@ class Empresa:
                     print("Por favor ingrese solo numeros")
             if cont>=8:
                 print("Felicidades su contratacion es inmediata")
+                print("\n")
+                print("\n")
             else:
                 print("Muy bien hemos terminado, gracias por presentarse, nosotros le llamammos")
+                print("\n")
+                print("\n")
         else:
             print("ACCESO DENEGADO")
+
+    def __del__(self):
+        pass
