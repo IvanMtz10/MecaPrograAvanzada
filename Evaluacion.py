@@ -1,3 +1,4 @@
+import csv
 class vestimenta:
     def __init__(self, tipoZapatos, tipoPantalon, tipoCamisa, saco):
         self.__tipoZapatos = tipoZapatos
@@ -209,6 +210,11 @@ class Empresa:
                     print("Por favor ingrese solo numeros")
             if cont>=8:
                 print("Felicidades su contratacion es inmediata")
+                with open('Empleados.csv', 'a', newline='') as csvfile:
+                    columna = ['Nombre','Apellido Paterno','Apellido Materno', 'Edad','Altura','Telefono','Carrera']
+                    writer = csv.DictWriter(csvfile, fieldnames=columna)
+                    writer.writerow({'Nombre':persona.getNombre(),'Apellido Paterno':persona.getApellidoP(),'Apellido Materno':persona.getApellidoM(),
+                                     'Edad':persona.getEdad(),'Altura':persona.getAltura(),'Telefono':persona.getTelefono(),'Carrera':persona.getCarrera()})
                 print("\n")
                 print("\n")
             else:
