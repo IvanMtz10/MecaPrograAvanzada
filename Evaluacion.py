@@ -131,7 +131,7 @@ class Empresa:
 
     def entrevistar(self,gerente, persona):
         if (gerente.getCargo() == "Gerente"):
-            print("El entrevistador es:", gerente.getNombre(), "que realizara la entrevista a :", persona.getNombre())
+            print(gerente.getNombre(), "esta entrevistando a :", persona.getNombre())
             print("Buen dia, le pido contestar una entrevista rapida")
             print("Para comenzar la entrevista seran datos personales")
             print("¿Cual es su nombre? ")
@@ -149,12 +149,66 @@ class Empresa:
             print("¿Cual es su carrera? ")
             print("Mi carrera es:", persona.getCarrera())
             print("***************************************************")
-            print("Ahora pasaremos a preguntas laborales")
-
-
+            cont=5
+            print("Ahora pasaremos a preguntas laborales, solo conteste 0 para NO y 1 para SI")
+            while True:
+                a = (input("¿Tiene experiencia mayor a 6 meses en alguna empresa? "))
+                try:
+                    n1 = float(a)
+                    if n1<2 :
+                        cont=cont+n1
+                        break
+                    else:
+                        print("numero equivocado")
+                except ValueError:
+                    print("Por favor ingrese solo numeros")
+            while True:
+                b = (input("¿Esta dispuesta a rotar turnos de trabajo?"))
+                try:
+                    n2 = float(b)
+                    if n2<2 :
+                        cont=cont+n2
+                        break
+                    else:
+                        print("numero equivocado")
+                except ValueError:
+                    print("Por favor ingrese solo numeros")
+            while True:
+                c = (input("¿Tiene disponibilidad de horario? "))
+                try:
+                    n3 = float(c)
+                    if n3<2 :
+                        cont=cont+n3
+                        break
+                    else:
+                        print("numero equivocado")
+                except ValueError:
+                    print("Por favor ingrese solo numeros")
+            while True:
+                d = (input("¿Tiene disponibilidad para viajar?"))
+                try:
+                    n4 = float(d)
+                    if n4<2 :
+                        cont=cont+n4
+                        break
+                    else:
+                        print("numero equivocado")
+                except ValueError:
+                    print("Por favor ingrese solo numeros")
+            while True:
+                e = input("¿Puede trabajar bajo presion?")
+                try:
+                    n5 = float(e)
+                    if n5<2 :
+                        cont=cont+n5
+                        break
+                    else:
+                        print("numero equivocado")
+                except ValueError:
+                    print("Por favor ingrese solo numeros")
+            if cont>=8:
+                print("Felicidades su contratacion es inmediata")
+            else:
+                print("Muy bien hemos terminado, gracias por presentarse, nosotros le llamammos")
         else:
             print("ACCESO DENEGADO")
-
-
-
-

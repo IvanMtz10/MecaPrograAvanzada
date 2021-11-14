@@ -11,10 +11,10 @@ Luis=Ev.Gerente("Luis","Perez","Lopez",30,"1.80 m",2311405012,"Ingenieria en Ges
 #Se muestra la informacion de presentacion
 Luis.presentacion()
 
-#se instancian persona desempleadas
-Jose=Ev.Persona("Jose Maria","Suarez","Arroyo",26,"1.68 m",2311201650,"Ing Industrial","Zapatillas","falda","blanca de manga corta","sueter")
+#se instancian personas desempleadas
+lupe=Ev.Persona("Guadalupe","Suarez","Arroyo",26,"1.68 m",2311201650,"Ing Industrial","Zapatillas","falda","blanca de manga corta","sueter")
 
-#Se comienza la entrevista
-IMA.entrevistar(Luis,Jose)
+#Se realizan las entrevistas
+IMA.entrevistar(Luis,lupe)
 
 
