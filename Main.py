@@ -14,14 +14,19 @@ Luis=Ev.Gerente("Luis","Perez","Lopez",30,"1.80 m",2311405012,"Ingenieria en Ges
 Luis.presentacion()
 
 #se instancian personas desempleadas
-lupe=Ev.Persona("Guadalupe","Suarez","Arroyo",26,"1.68 m",2311201650,"Ing Industrial","Zapatillas","falda","blanca de manga corta","sueter")
-diana=Ev.Persona("Diana Laura","Marquez","Valle",25, "1.65",2221456079,"Doctorado en Sistemas computacionales","de piso rojos","de vestir","color rosa","color rojo")
+lupe=Ev.Persona("Guadalupe","Suarez","Arroyo",26,"1.68 m",2311201650,"Ingenieria Industrial","Zapatillas","falda","blanca de manga corta","sueter")
+diana=Ev.Persona("Diana Laura","Marquez","Valle",25, "1.65 m",2221456079,"Doctorado en Sistemas computacionales","de piso rojos","de vestir","color rosa","color rojo")
 Martin=Ev.Persona("Martin","Sanchez","Diaz",32,"1.80 m",2221406363,"Ingenieria en mecatronica","Negros","de traje", "azul","de traje")
 
 #Se realizan las entrevistas
 IMA.entrevistar(Luis,lupe)
 IMA.entrevistar(Luis,diana)
 IMA.entrevistar(Luis,Martin)
+'''
+NOTA IMPORTANTE: 
+Cada que se ejecuta el programa principal, si la persona califica para contratacion inmediata
+se agragaran sus datos al archivo.CSV por lo que entre mas veces se corra el codigo mas veces se repetira la misma persona
+'''
 
 
 
