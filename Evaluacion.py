@@ -5,13 +5,33 @@ class vestimenta:
         self.__saco = saco
         self.__tipoCamisa = tipoCamisa
 
+#Getters y setters
+    def getZapatos(self):
+        return self.__tipoZapatos
+    def getPantalon(self):
+        return self.__tipoPantalon
+    def getCamisa(self):
+        return self.__tipoCamisa
+    def getSaco(self):
+        return self.__saco
+
+    def setZapatos(self, nuevosZapatos):
+        self.__tipoZapatos=nuevosZapatos
+    def setPantalon(self, nuevoPantalon):
+        self.__tipoPantalon=nuevoPantalon
+    def setCamisa(self, nuevaCamisa):
+        self.__tipoCamisa=nuevaCamisa
+    def setSaco(self,nuevoSaco):
+        self.__saco=nuevoSaco
+
+
     def vestirse(self):
-        print("La vestimenta que se esta usando actualmente es:")
-        print("Zapatos: ", self.__tipoZapatos)
-        print("Tipo de pantalon: ", self.__tipoPantalon)
-        print("Un saco: ", self.__saco)
-        print("Una camisa: ", self.__tipoCamisa)
-        print("\n")
+        print("La vestimenta que estoy usando actualmente es:")
+        print("Zapatos: ", self.getZapatos())
+        print("Tipo de pantalon: ", self.getPantalon())
+        print("Un saco: ", self.getSaco())
+        print("Una camisa: ", self.getCamisa())
+
 
 class Persona(vestimenta):
     def __init__(self, nombre,apellidoP,apellidoM, edad,altura,noTelefono,carrera,tipoZapatos, tipoPantalon, tipoCamisa, saco):
@@ -55,6 +75,7 @@ class Persona(vestimenta):
         print("Tengo ",self.getEdad(),"años de edad")
         print("Mi altura es: ",self.getAltura())
         print("Mi numero de telefono es: ",self.getTelefono())
+        Persona.vestirse(self)
 
 class Empleado(Persona):
     def __init__(self,nombre,apellidoP,apellidoM, edad,altura,noTelefono,carrera, empresa, cargo, sueldo, tipoZapatos, tipoPantalon, tipoCamisa, saco):
@@ -82,7 +103,6 @@ class Empleado(Persona):
         Persona.presentacion(self)
         print("La empresa donde trabajo se llama: ",self.getEmpresa())
         print("Mi cargo es: ",self.getCargo())
-        print("Mi sueldo es de ",self.getSueldo(),"pesos al mes")
         print("\n")
 
 class Gerente(Empleado):
@@ -94,17 +114,16 @@ class Empresa:
         self.__nombre=nombre
         self.__ubicacion=ubicacion
 
+    def trabajar(self):
+        print("El dia laboral ha comenzado")
+        print("Como se esta contratando nuevo personal para la empresa el gerente realizara entrevistas a canditados")
+        print("\n")
+
     def Bienvenida(self):
         print("Buen dia la empresa",self.__nombre, "le da la bienvenida")
         print("Ubicada en ",self.__ubicacion)
         print("Con innovacion alcanzamos el mañana")
         print("\n")
 
-class Trabajar():
-    def __init__(self):
-        pass
-
-    def acciones(self):
-        print("El dia laboral ha comenzado")
 
 
